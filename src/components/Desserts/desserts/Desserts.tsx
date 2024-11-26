@@ -18,7 +18,6 @@ type Desserts = Detail[];
 
 const data = require("../../../data.json");
 const desserts: Desserts = data;
-console.log(desserts);
 
 export default function Desserts() {
   return (
