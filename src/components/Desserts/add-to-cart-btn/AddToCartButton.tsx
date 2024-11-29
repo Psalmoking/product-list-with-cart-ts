@@ -26,7 +26,7 @@ export default function AddToCartButton({ category, itemIsInCart }: AddToCartPro
 
   const mouseLeaveHandler = () => {
     setButtonContent(
-      <div className="flex items-center bg-white border border-red-700 border-1 rounded-2xl py-1.5 px-3 w-fit mt-[-16px] font-medium hover:cursor-pointer" onClick={mouseEnterHandler}>
+      <div className="flex items-center bg-white border border-red-700 border-1 rounded-2xl py-1.5 px-3 w-fit mt-[-16px] font-medium hover:cursor-pointer  max-xs:py-2 max-xs:px-7" onClick={mouseEnterHandler}>
         <img src={addToCartIcon} className="w-4 mr-1.5 inline" alt="add-to-cart-icon" />
         <span className="text-xs">Add to cart</span>
       </div>
@@ -34,11 +34,11 @@ export default function AddToCartButton({ category, itemIsInCart }: AddToCartPro
   }
 
   const displayItemAmountEditContent = (amount: number) => (
-    <div className="flex bg-red-700 text-white  rounded-2xl w-fit font-medium mt-[-13px] text-xs px-3 py-[0.325rem]" onMouseLeave={mouseLeaveHandler}>
+    <div className="flex bg-red-700 text-white  rounded-2xl w-fit font-medium mt-[-13px] text-xs px-3 py-[0.325rem] max-xs:px-4 max-xs:py-[0.515rem] max-xs:mt-[-15px]" onMouseLeave={mouseLeaveHandler}>
       <div className="flex border border-[1.4px] border-white rounded-full px-[1.5px] hover:cursor-pointer" onClick={decrementHandler}>
         <img src={decrementIcon} alt="decrement-icon" />
       </div>
-      <span className="mx-6">{amount}</span>
+      <span className="mx-6 max-xs:mx-9">{amount}</span>
       <div className="flex border border-[1.4px] border-white rounded-full px-[1.5px] hover:cursor-pointer" onClick={incrementHandler}>
         <img src={incrementIcon} alt="increment-icon" />
       </div>
@@ -50,7 +50,8 @@ export default function AddToCartButton({ category, itemIsInCart }: AddToCartPro
   }
 
   const [buttonContent, setButtonContent] = useState<ReactNode>(
-    <div className="flex items-center bg-white border border-red-700 border-1 rounded-2xl py-1.5 px-3 w-fit mt-[-16px] font-medium hover:cursor-pointer" onClick={mouseEnterHandler}>
+    // action
+    <div className="flex items-center bg-white border border-red-700 border-1 rounded-2xl py-1.5 px-3 w-fit mt-[-16px] font-medium hover:cursor-pointer max-xs:py-2 max-xs:px-7" onClick={mouseEnterHandler}>
       <img src={addToCartIcon} className="w-4 mr-1.5 inline" alt="add-to-cart-icon" />
       <span className="text-xs">Add to cart</span>
     </div>

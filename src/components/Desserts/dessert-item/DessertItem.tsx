@@ -9,11 +9,11 @@ export default function DessertItem({ category, name, price, image }: DessertIte
   const itemIsInCart = itemInCart ? true : false;
 
   return (
-    <div className="w-fit">
-      <div className="grid place-items-center">
-        <img src={image.desktop} width={160} height={140} className={`rounded-md border border-[1.5px] ${itemIsInCart && "border-red-700"}`} alt={`${category}-image`} />
+    <div className="w-full">
+      <header className="grid place-items-center">
+        <img src={image.desktop} width={160} height={140} className={`rounded-md border border-[1.5px] ${itemIsInCart && "border-red-700"} max-xs:object-cover max-xs:w-[95%] max-xs:h-[10rem]`} alt={`${category}-image`} />
         <AddToCartButton category={category} itemIsInCart={itemIsInCart} />
-      </div>
+      </header>
       <div className="px-2">
         <p className="font-medium text-gray-500 text-[10px]">{category}</p>
         <h5 className="font-bold text-[10.5px]">{name}</h5>

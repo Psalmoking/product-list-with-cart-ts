@@ -22,7 +22,7 @@ export function Backdrop(props: Props) {
 export default function Modal(props: Props) {
   return (
     <Backdrop>
-      <div className="bg-white p-6 rounded-lg max-h-[30rem] max-w-[95%] shadow-[0px_0px_10px_rgba(0,0,0,0.2)] z-20">{props.children}</div>;
+      <div className="bg-white p-6 rounded-lg max-h-[30rem] max-w-[95%] shadow-[0px_0px_10px_rgba(0,0,0,0.2)] z-20 max-xs:fixed max-xs:bottom-0 max-xs:left-0 max-xs:max-w-full max-xs:max-h-[33rem] max-xs:rounded-b-none">{props.children}</div>;
     </Backdrop>
   );
 }

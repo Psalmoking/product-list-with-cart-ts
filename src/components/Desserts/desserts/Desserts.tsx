@@ -24,7 +24,7 @@ export default function Desserts() {
     <div>
       <h1 className="text-3xl font-bold mb-2">Desserts</h1>
       {/* add a min-width to the grid */}
-      <section className="grid grid-cols-3 gap-3 w-fit min-w-[25rem]">
+      <section className="grid grid-cols-3 gap-3 w-fit min-w-[25rem] max-xs:flex max-xs:flex max-xs:flex-col max-xs:items-center max-xs:w-full max-xs:min-w-0">
         {desserts.map((dessert) => (
           <DessertItem
             category={dessert.category}
